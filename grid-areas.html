@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photo Gallery</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+        <link rel="stylesheet" type="text/css" href="stylesheets/flex-styling.css">
+        <style>
+            h1 {
+                font-family: "Baskerville", Garamond, serif;
+                text-align: center;
+                font-size: 64px;
+            }
+
+            #gallery {
+                /* This property creates the CSS Grid container */
+                display: -ms-grid;
+                display: grid;
+
+                width: 100%;
+                height: 100%;
+
+                -ms-grid-row: repeat(auto-fit, 1fr);
+                grid-row: repeat(auto-fit, 1fr);
+                grid-template-rows: repeat(auto-fit, 1fr);
+
+                -ms-grid-column: repeat(auto-fit, 1fr);
+                grid-column: repeat(auto-fit, 1fr);
+                grid-template-columns: repeat(auto-fit, 1fr);
+
+                grid-template-areas: 
+                    "pic3 pic3 pic3 pic1 pic1"
+                    "pic3 pic3 pic3 pic1 pic1"
+                    "pic3 pic3 pic3 pic4 pic5"
+                    "pic2 pic2 pic6 pic7 pic7"
+                    "pic2 pic2 pic8 pic7 pic7";
+
+                /* This adds 10 px of space between our elements in our grid */
+                -ms-grid-gap: 10px;
+                grid-gap: 10px;
+                gap: 10px;
+            }
+
+            #gallery a, #gallery img {
+                width: 100%;
+                height: 100%;
+            }
+
+            #pic1 {
+                grid-area: pic1;
+            }
+
+            #pic2 {
+                grid-area: pic2;
+            }
+
+            #pic3 {
+                grid-area: pic3;
+            }
+            #pic4 {
+                grid-area: pic4;
+            }
+            #pic5 {
+                grid-area: pic5;
+            }
+            #pic6 {
+                grid-area: pic6;
+            }
+            #pic7 {
+                grid-area: pic7;
+            }
+
+            #pic8 {
+                grid-area: pic8;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <a href="index.html"><li>CSS Grid Basics</li></a>
+                <a href="explicit-and-implicit.html"><li>Explicit vs. Implicit Grid</li></a>
+                <a href="grid-areas.html"><li>Grid Areas</li></a>
+            </ul>
+        </nav>
+        <h1>Photo Gallery</h1>
+        <div id="gallery">
+            <a id="pic1" href="https://i.pinimg.com/originals/c9/68/2c/c9682c1a719b9d9219febc9c31f1cb22.jpg">
+                <img src="https://i.pinimg.com/originals/c9/68/2c/c9682c1a719b9d9219febc9c31f1cb22.jpg"/>
+            </a>
+            <a id="pic2" href="https://i.pinimg.com/originals/9f/91/2e/9f912eff2f2557ed1687c6c2f369d8ee.jpg">
+                <img src="https://i.pinimg.com/originals/9f/91/2e/9f912eff2f2557ed1687c6c2f369d8ee.jpg"/>
+            </a>
+            <a id="pic3" href="https://www.sheknows.com/wp-content/uploads/2018/08/gecphr8jxdjzlbdq7xi7.jpeg?w=709">
+                <img src="https://www.sheknows.com/wp-content/uploads/2018/08/gecphr8jxdjzlbdq7xi7.jpeg?w=709"/>
+            </a>
+            <a id="pic4" href="https://i.pinimg.com/originals/7f/a2/1b/7fa21b7d9d4c39771f4998b395ead994.jpg">
+                <img src="https://i.pinimg.com/originals/7f/a2/1b/7fa21b7d9d4c39771f4998b395ead994.jpg"/>
+            </a>
+            <a id="pic5" href="https://www.winnipesaukee.com/forums/attachment.php?attachmentid=11069&stc=1&d=1443215381">
+                <img src="https://www.winnipesaukee.com/forums/attachment.php?attachmentid=11069&stc=1&d=1443215381"/>
+            </a>
+            <a id="pic6" href="https://comicbookandbeyond.com/wp-content/uploads/2019/09/Bedivere-best-quotes.jpg">
+                <img src="https://comicbookandbeyond.com/wp-content/uploads/2019/09/Bedivere-best-quotes.jpg"/>
+            </a>
+            <a id="pic7" href="https://cdn.pastemagazine.com/www/articles/2021/02/04/monty-python-quotes-inline-1.jpg">
+                <img src="https://cdn.pastemagazine.com/www/articles/2021/02/04/monty-python-quotes-inline-1.jpg"/>
+            </a>
+            <a id="pic8" href="https://i.pinimg.com/originals/0e/21/55/0e2155fca1309e8aff487b1cb6b9ecd9.jpg">
+                <img src="https://i.pinimg.com/originals/0e/21/55/0e2155fca1309e8aff487b1cb6b9ecd9.jpg"/>
+            </a>
+        </div>
+    </body>
+</html>

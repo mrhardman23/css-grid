@@ -1,0 +1,111 @@
+* {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+
+    font-family: "Baskerville", Garamond, serif;
+}
+
+body {
+    margin: 0;
+
+    background-color: whitesmoke;
+}
+
+nav {
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    /* New for activity 2 */
+    /* Move the unordered list horizontally to the center of the row */
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    /* Got rid of fixed height for activity 3 */
+
+    margin: 10px;
+    padding-top: 5px;
+
+    background-color: #07575B;
+}
+
+nav ul {
+    /* 
+        This needs flexbox so that the child elements inside the ul will
+        stretch to fill the container.
+    */
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    /* New for activity 3 */
+    width: 100%;
+
+    /* New for activity 3 */
+    margin: 0;
+    padding: 0;
+
+    /* New for activity 2 */
+    /* Moves the list items horizontally to the center of the unordered list */
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    /* New for activity 2 */
+    /* Center the list items vertically inside the unordered list */
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+
+    /* New for activity 3 */
+    -webkit-flex-grow: 1;
+    -webkit-flex-shrink: 0;
+    -webkit-flex-basis: 215px;
+    
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 215px;
+
+    /* 
+        This sets the top margin to 0 px, 
+        the left and right to 5px with the 
+        second value, and the bottom to 5px
+        with the third value.
+    */
+    margin: 0px 5px 5px;
+    
+    padding: 20px;
+    border: 3px solid #C4DFE6;
+
+    background-color: #66A5AD;
+    color: aliceblue;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+/* New for activity 2 */
+nav ul li {
+    font-size: 24px;
+}
