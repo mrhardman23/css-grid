@@ -1,0 +1,77 @@
+h1 {
+    font-family: "Baskerville", Garamond, serif;
+    text-align: center;
+    font-size: 48px;
+}
+
+#gallery {
+    /* This property creates the CSS Grid container */
+    display: -ms-grid;
+    display: grid;
+
+    width: 100%;
+    height: 100%;
+
+    /* Defining the number of rows and the height of the rows */
+    /* 
+        This repeats the number of rows until the whole 
+        container is filled (auto-fit) and the rows have a 
+        minimum height of 270px and a maximum height of 1 free
+        space
+    */
+    -ms-grid-row: repeat(12, 1fr);
+    grid-row: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+
+    /* Defining the number of columns and the width of the columns */
+    /* 
+        This repeats the number of columns until the whole 
+        container is filled (auto-fit) and the columns have a 
+        minimum width of 480px and a maximum width of 1 free
+        space
+    */
+    -ms-grid-column: 1fr;
+    grid-column: 1fr;
+    grid-template-columns: 1fr;
+
+    /* This adds 10 px of space between our elements in our grid */
+    -ms-grid-gap: 10px;
+    grid-gap: 10px;
+    gap: 10px;
+}
+
+#gallery a, #gallery img {
+    width: 100%;
+    height: 100%;
+}
+
+@media all and (min-width: 1280px){
+    
+    h1 {
+        font-size: 64px;
+    }
+
+    #gallery {
+        /* Defining the number of rows and the height of the rows */
+        /* 
+            This repeats the number of rows until the whole 
+            container is filled (auto-fit) and the rows have a 
+            minimum height of 270px and a maximum height of 1 free
+            space
+        */
+        -ms-grid-row: repeat(auto-fit, minmax(270px, 1fr));
+        grid-row: repeat(auto-fit, minmax(270px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(270px, 1fr));
+    
+        /* Defining the number of columns and the width of the columns */
+        /* 
+            This repeats the number of columns until the whole 
+            container is filled (auto-fit) and the columns have a 
+            minimum width of 480px and a maximum width of 1 free
+            space
+        */
+        -ms-grid-column: repeat(auto-fit, minmax(480px, 1fr));
+        grid-column: repeat(auto-fit, minmax(480px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    }
+}
